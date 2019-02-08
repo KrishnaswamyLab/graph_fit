@@ -7,3 +7,6 @@ pyunlocbox
 pygsp
 jupyter
 ipython
+rpy2
+pandas
+scprep
