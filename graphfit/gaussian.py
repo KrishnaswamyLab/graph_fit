@@ -20,8 +20,7 @@ def get_gauss(X, sigma=1):
     X_back = X[:, np.newaxis] #Shape [n x 1 x p]
     X_differences = X_front - X_back
     D = np.sqrt(np.sum((X_differences**2), axis=-1));
-
     W = np.exp((-(D**2))/sigma)
-
+    np.fill_diagonal(W,0)
     # return the affinity matrix
     return W
